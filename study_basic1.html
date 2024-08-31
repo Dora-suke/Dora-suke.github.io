@@ -58,6 +58,34 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
+
+
+
+
+
+
+
+
+
+/* コードブロック内のテキストを折り返す設定 */
+.CodeMirror pre.CodeMirror-line {
+    white-space: pre-wrap; /* 折り返しを有効にする */
+    word-wrap: break-word; /* 長い単語の折り返しを有効にする */
+}
+
+/* 必要に応じて他のスタイルも調整 */
+.jp-InputArea-editor {
+    overflow-x: auto; /* 横スクロールを有効にする（必要なら） */
+}
+
+
+
+
+
+
+
+
+
   </style>
 
 
@@ -14572,6 +14600,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     }
     init_mathjax();
     </script>
+ 
+    
+    
+    
+    
+    
+    
+# 文字折り返し用で追加
+<style>
+  pre {
+      white-space: pre-wrap; /* 行の折り返しを無効にする */
+      overflow-x: auto; /* 横スクロールを可能にする */
+      word-wrap: break-word; /* 長い単語を改行する */
+  }
+</style>
+
+
+
+    
+    
+    
+    
+    
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
